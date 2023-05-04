@@ -29,20 +29,20 @@ async function scrapeWebpage(url) {
 }
 
 const handler = async (req, res) => {
-  const { url } = req.query;
-
-  if (!url) {
-    res.status(400).json({ error: 'URL is required' });
-    return;
-  }
-
-  try {
-    const data = await scrapeWebpage(url);
-    res.json(data);
-  } catch (error) {
-    console.error('Error scraping:', error); // Log the error details
-    res.status(500).json({ error: 'Internal server error', details: error.message });
-  }
-};
+    const { query: { url } } = req;
+  
+    if (!url) {
+      res.status(400).json({ error: 'URL is required' });
+      return;
+    }
+  
+    try {
+      const data = await scrapeWebpage(url);
+      res.json(data);
+    } catch (error) {
+      console.error('Error scraping:', error); // Log the error details
+      res.status(500).json({ error: 'Internal server error', details: error.message });
+    }
+  };
 
 module.exports = cors(handler);
