@@ -41,7 +41,15 @@ export default function Home() {
     try {
       const serverUrl = 'https://scraipe-serv.vercel.app';
       const apiUrl = `${serverUrl}/api/scraper?url=${encodeURIComponent(scrapeTarget)}`;
+
+      console.log('API URL:', apiUrl); // Log the apiUrl
+
+
       const response = await fetch(apiUrl);
+
+      console.log('Response:', response); // Log the response object
+
+      
       const result = await response.json();
 
       if (response.ok) {
