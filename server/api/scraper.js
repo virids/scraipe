@@ -29,9 +29,11 @@ async function scrapeWebpage(url) {
 }
 
 const handler = async (req, res) => {
+    console.log('Request:', req); // Log the whole request object
     const { query: { url } } = req;
   
     if (!url) {
+      console.error('URL not found in request:', req.query); // Log the query object
       res.status(400).json({ error: 'URL is required' });
       return;
     }
@@ -44,5 +46,5 @@ const handler = async (req, res) => {
       res.status(500).json({ error: 'Internal server error', details: error.message });
     }
   };
-
-module.exports = cors(handler);
+  
+  module.exports = cors(handler);
