@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "client": "cd client && npm run dev",
+    "cliente": "cd cliente && npm run dev",
     "server": "cd server && npm start",
-    "start": "concurrently \"npm run client\" \"npm run server\""
+    "start": "concurrently \"npm run cliente\" \"npm run server\""
   },
   "devDependencies": {
     "concurrently": "^6.6.0"
