@@ -29,8 +29,8 @@ async function scrapeWebpage(url) {
 }
 
 const handler = async (req, res) => {
-    console.log('Request:', req); // Log the whole request object
-    const { query: { url } } = req;
+    console.log('Request query:', req.query); // Log the query object
+    const url = req.query.url;
   
     if (!url) {
       console.error('URL not found in request:', req.query); // Log the query object
