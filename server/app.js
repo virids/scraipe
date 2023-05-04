@@ -6,7 +6,16 @@ const cors = require('cors');
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors());
+
+// Configure CORS
+const corsOptions = {
+  origin: '*', // You can also specify a specific domain instead of '*'
+  methods: 'GET,POST,PUT,DELETE',
+  allowedHeaders: 'Content-Type,Authorization',
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 
 async function scrapeWebpage(url) {
   try {
