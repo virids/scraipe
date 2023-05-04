@@ -39,7 +39,7 @@ export default function Home() {
     event.preventDefault();
     setScrapedTextInput("");
     try {
-      const serverUrl = 'http://localhost:3001';
+      const serverUrl = 'https://scraipe-serv.vercel.app';
       const apiUrl = `${serverUrl}/api/scraper?url=${encodeURIComponent(scrapeTarget)}`;
       const response = await fetch(apiUrl);
       const result = await response.json();
