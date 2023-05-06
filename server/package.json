@@ -1,7 +1,7 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "Express.js server for my-app",
+  "name": "scraipe-server",
+  "version": "0.0.1",
+  "description": "Express.js server for scraipe",
   "main": "app.js",
   "scripts": {
     "dev": "vercel dev",
@@ -18,6 +18,6 @@
   "author": "",
   "license": "ISC",
   "engines": {
-    "node": "14.x.0"
+    "node": ">=14.6.0"
   }
 }

@@ -1,15 +1,15 @@
 {
-  "name": "my-app",
-  "version": "1.0.0",
-  "private": true,
+  "name": "scraipe",
+  "version": "0.0.1",
   "scripts": {
     "cliente": "cd cliente && npm run dev",
     "server": "cd server && npm start",
     "start": "concurrently \"npm run cliente\" \"npm run server\""
   },
   "devDependencies": {
-    "concurrently": "^6.6.0"
+    "concurrently": "^8.0.1"
+  },
+  "engines": {
+    "node": ">=14.6.0"
   }
 }
-
-
