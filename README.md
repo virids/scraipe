@@ -1,4 +1,4 @@
-# scraipe OpenAI API Quickstart - Node.js example app
+# scraipe
 
 This is a simple script that scrapes the given hyperlink and then summarizes it's content into a tweet using ChatGPT API. 
 
@@ -10,10 +10,10 @@ Node.js version >= 14.6.0
 
 On client side, you will have to set up two environment variables:
 
-1. OPENAI_API_KEY - your [API key](https://platform.openai.com/account/api-keys)
+1. OPENAI_API_KEY - your [API key](https://platform.openai.com/account/api-keys).
 
-2. SERVER - address where your server side is hosted
+2. SERVER - address where your server side is hosted.
 
 ## Demo
 
-You can check scraipe in action [here](https://scraipe.archamond.space)
+You can check scraipe in action [here](https://scraipe.archamond.space).
